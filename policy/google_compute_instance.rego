@@ -9,8 +9,6 @@ allowed_environments := [
   "sandbox",
   "development",
   "qa",
-  "pvs",
-  "slabeling",
   "production",
 ]
 
