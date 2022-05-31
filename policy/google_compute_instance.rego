@@ -55,9 +55,10 @@ deny[msg] {
   changeset := changes_by_type[resource_type][_]
 
   not valid_label(changeset.change.after.labels.environment, allowed_environments)
-  msg := sprintf("%v has an invalid environment label: %v", [
+  msg := sprintf("%v has an invalid environment label: [ %v ]. Allowed environment labels: [ %v ]", [
     changeset.address,
     changeset.change.after.labels.environment,
+    concat(", ", allowed_environments)
   ])
 }
 
